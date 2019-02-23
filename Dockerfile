@@ -1,4 +1,5 @@
-FROM node:8.11.1
+FROM node:10.15.1
+
 MAINTAINER Shingo Sato <shinsugar@gmail.com>
 
 RUN apt-get update
@@ -8,5 +9,8 @@ RUN apt-get install -y gconf-service libasound2 libatk1.0-0 libc6 libcairo2 libc
   libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 \
   ca-certificates fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget
 
-ENV PUPPETEER_VERSION '1.3.0'
+ENV PUPPETEER_VERSION '1.12.2'
+
 RUN npm install puppeteer@$PUPPETEER_VERSION -g
+
+ENTRYPOINT ["/bin/bash"]
