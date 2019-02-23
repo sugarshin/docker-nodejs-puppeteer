@@ -11,6 +11,6 @@ RUN apt-get install -y gconf-service libasound2 libatk1.0-0 libc6 libcairo2 libc
 
 ENV PUPPETEER_VERSION '1.12.2'
 
-RUN npm install puppeteer@$PUPPETEER_VERSION -g
+RUN yarn add global puppeteer@$PUPPETEER_VERSION
 
 ENTRYPOINT ["/bin/bash"]
