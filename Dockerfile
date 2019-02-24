@@ -11,12 +11,6 @@ RUN apt-get update && \
     libxtst6 ca-certificates fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget && \
   rm -rf /var/lib/apt/lists/*
 
-RUN groupadd -r pptruser && useradd -r -g pptruser -G audio,video pptruser \
-    && mkdir -p /home/pptruser/Downloads \
-    && chown -R pptruser:pptruser /home/pptruser
-
-USER pptruser
-
 ENV PUPPETEER_VERSION '1.12.2'
 
 RUN yarn global add puppeteer@$PUPPETEER_VERSION && yarn cache clean
