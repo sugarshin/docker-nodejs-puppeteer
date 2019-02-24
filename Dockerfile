@@ -13,6 +13,8 @@ RUN apt-get update && apt-get install -y \
 
 ENV PUPPETEER_VERSION '1.12.2'
 
-RUN yarn global add puppeteer@$PUPPETEER_VERSION
+RUN yarn global add puppeteer@$PUPPETEER_VERSION && yarn cache clean
+
+ENV NODE_PATH="/usr/local/share/.config/yarn/global/node_modules:${NODE_PATH}"
 
 ENTRYPOINT ["/bin/bash"]
