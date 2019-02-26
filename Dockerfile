@@ -12,7 +12,7 @@ RUN apt-get update && \
     xdg-utils wget && \
   rm -rf /var/lib/apt/lists/*
 
-ENV PUPPETEER_VERSION '1.12.2'
+ENV PUPPETEER_VERSION '1.11.0'
 
 RUN yarn global add puppeteer@$PUPPETEER_VERSION && yarn cache clean
 
