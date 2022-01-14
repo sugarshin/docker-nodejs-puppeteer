@@ -1,5 +1,6 @@
 .dockerignore
 .git
 .github
+.node-version
 Dockerfile
 README.md

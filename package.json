@@ -1,0 +1,19 @@
+{
+  "name": "docker-nodejs-puppeteer",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Docker Image for Node.js + Puppeteer",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sugarshin/docker-nodejs-puppeteer.git"
+  },
+  "author": "sugarshin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sugarshin/docker-nodejs-puppeteer/issues"
+  },
+  "homepage": "https://github.com/sugarshin/docker-nodejs-puppeteer#readme",
+  "dependencies": {
+    "puppeteer": "13.0.1"
+  }
+}
